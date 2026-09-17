@@ -3,17 +3,9 @@
 **给 MP3 洗个澡，保留原来的声音。**  
 A local MP3 metadata cleaner. Part of the CRAT Tool Series.
 
-[**macOS 下载**](https://github.com/crat86/crat-audiobath/releases/tag/v0.2.0-beta) · [**Windows 下载（未测试 Beta）**](https://github.com/crat86/crat-audiobath/releases/tag/v0.2.0-win.1) · [反馈 / Issues](https://github.com/crat86/crat-audiobath/issues)
+[**macOS 下载**](https://github.com/crat86/crat-audiobath/releases/tag/v0.2.0-beta) · [反馈 / Issues](https://github.com/crat86/crat-audiobath/issues)
 
 ## 下载与使用
-
-### Windows 10/11 · Intel / AMD x64
-
-1. 在 Windows Release 的 **Assets** 下载 `CRAT-AudioBath-v0.2.0-win.1-Windows-x64.zip`。
-2. **完整解压**后双击 `AudioBath.exe`，保留同目录的 resources 和 DLL 文件，不要在压缩包内直接运行。无需额外安装 Node.js 或 Electron。
-3. 选择或拖入 MP3，设置命名规则；清理副本保存在原文件所在文件夹。
-
-> **未经实机测试的 Beta，EXE 未签名。** 本次仅做源码语法和打包检查，没有执行 Windows 启动、功能、音频或实机测试。SmartScreen 或杀毒软件可能提示或拦截。未提供原生 ARM64 或 32 位版。每批最多 500 个文件，单文件最大 512 MB。
 
 ### macOS 13+ · Apple Silicon
 
@@ -23,7 +15,7 @@ A local MP3 metadata cleaner. Part of the CRAT Tool Series.
 
 > Mac Beta 为临时签名，尚未经过 Apple Developer ID 签名及公证，macOS 可能阻止首次打开。不包含 Intel Mac 版本。
 
-GitHub 自动生成的 **Source code** 不是安装包。两种系统都需要原文件夹允许写入。
+GitHub 自动生成的 **Source code** 不是安装包。请确保原文件夹允许写入。
 
 ## 它能做什么
 
@@ -41,13 +33,10 @@ GitHub 自动生成的 **Source code** 不是安装包。两种系统都需要�
 - 这是标签清理工具，不是降噪、母带处理或音频水印移除工具。
 - Xing、Info、LAME 等位于音频帧内的播放和编码头会保留。
 - 损坏的标签尺寸或找不到 MP3 音频帧时，会显示处理错误。
-- Windows 首版使用 Electron，下载体积比原生 Mac 版更大；功能和兼容性尚未经过 Windows 实测。
 
 ## English
 
 AudioBath creates local MP3 copies without common ID3, APEv2 and Lyrics3 tag metadata and embedded artwork. It does not re-encode audio. Custom naming and ID3 title recognition are supported; outputs are written beside the originals without overwriting existing files.
-
-**Windows:** download the Windows x64 ZIP above, extract the entire archive and run **AudioBath.exe**. Keep all accompanying files together. Targets Windows 10/11 on Intel/AMD x64. No separate Node.js/Electron installation is needed. **Unsigned, UNTESTED pre-release: syntax and packaging checks only; no Windows launch, functional, audio or real-device tests were performed.** Limit: 500 files per batch, 512 MB per file.
 
 **macOS:** download the macOS ZIP above, extract it and move AudioBath.app into Applications. Requires Apple Silicon and macOS 13+. Ad-hoc signed, not Apple-notarized.
 
